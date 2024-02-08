@@ -66,7 +66,7 @@ class _DiseaseDetectionState extends State<DiseaseDetection> {
     print(res);
   }
 
-  List list = ["Mango", "Tomato", "Potato"];
+  List list = ["Mango", "Tomato", "Potato", "Guava", "Cotton"];
   String dropdownValue = "Mango";
 
   @override
