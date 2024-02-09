@@ -281,7 +281,51 @@ class _DetectionDeteilsState extends State<DetectionDeteils> {
               "फसलांचा परिस्थिती बदला, फंगीसायड लागू करा, चंद्रोदय उत्पादन साधारित्य.";
           break;
 
-        case "Potato healthy":
+        case "Potato Bacteria":
+          causes =
+              "बटाट्याच्या बॅक्टेरिया रोगाची काही कारणे जमीनच्या कुळीत बॅक्टेरिया, पाणीची कमतरता, बटाट्याची दुर्बलता, आणि अशुद्ध कृत्रिम संयोजनांमध्ये आहेत.";
+          solution =
+              " बटाट्याच्या बॅक्टेरिया रोगाच्या नियंत्रणासाठी आयरोक्साइफ्लोरिड, कॉपर सल्फेट, आणि बॅक्टेरियल सायलेन या फवारण्यांचा उपयोग केला जातो.";
+          break;
+        case "Potato Fungi":
+          causes =
+              " बटाट्याच्या कवकरोगाची काही कारणे प्रादुर्भावित वातावरण, अतिरिक्त पाणी, अशुद्ध कृत्रिम संयोजन, आणि बटाट्याची दुर्बलता आहेत.";
+          solution =
+              "बटाट्याच्या कवकरोगाच्या नियंत्रणासाठी मॅन्कोझेब, सायलेन, आणि टॉपमैन या फवारण्यांचा उपयोग केला जातो.";
+          break;
+        case "Potato Nematode":
+          causes =
+              "बटाट्याच्या नेमाटोडची काही कारणे जमिनीतील नेमाटोडस, बटाट्याची दुर्बलता, प्रादुर्भावित वातावरण, आणि अतिरिक्त पाणी आहेत.";
+          solution =
+              " बटाट्याच्या नेमाटोडच्या नियंत्रणासाठी कार्बोसुल्फॅन, व्हॅजिलेन, आणि आईड्रेट-१५ या फवारण्यांचा उपयोग केला जातो.";
+          break;
+        case "Potato Pest":
+          causes =
+              "बटाट्याचे कीटकची काही कारणे पाणीची कमतरता, बटाट्याची दुर्बलता, आणि अतिरिक्त आपुण आहेत.";
+          solution =
+              "बटाट्याचे कीटक नियंत्रण करण्यासाठी इमिडाक्लोप्रिड, असेटमेथ्रीन, आणि डेल्टामेथ्रीन या कीटकनाशकांचा उपयोग केला जातो.";
+          break;
+        case "Potato Phytophthora":
+          causes =
+              "बटाट्याचा फायटोफ्थोराचा काही कारणे जमिनीतील नम्रता, पाणीची कमतरता, अतिरिक्त पाणी, आणि बटाट्याची दुर्बलता आहेत.";
+          solution =
+              "बटाट्याचा फायटोफ्थोराच्या नियंत्रणासाठी फोसेटील, मेटालाक्सिल, आणि फोसेटील-मॅटालाक्सिल या फवारण्यांचा उपयोग केला जातो.";
+          break;
+
+        case "Potato Virus":
+          causes =
+              "बटाट्याचे व्हायरस रोग किंवा रोगाची काही कारणे बटाट्याची दुर्बलता, वातावरणातील अनियमितता, आणि कीटक-रोगांच्या संक्रमणांमध्ये सामायिक आहेत";
+          solution =
+              "बटाट्याचे व्हायरस रोग नियंत्रण करण्यासाठी बॅक्टेरियल सायलेन, आणि असेटमेथ्रीन या कीटकनाशकांचा उपयोग केला जातो.";
+          break;
+        case "Potato Diseased":
+          causes =
+              "बटाट्याचे रोग विकृतींची काही कारणे अजूनही स्पष्टपणे नसलेली आहेत, परंतु ते बटाट्याच्या विविध कीटक-रोगांच्या संक्रमणाच्या सामायिक रहितीत, कीटकांच्या प्रभावात, किंवा पोषणातील कमतरत्वात प्राधान्य असू शकते.";
+          solution =
+              "बटाट्याच्या रोगांना नियंत्रण करण्यासाठी उपलब्ध केलेल्या रोगनिरोधक किंवा निरोधक उपाय करा.";
+          break;
+
+        case "Potato Healthy":
           causes = "कोणतेही विशिष्ट रोग ओळखले नाहीत.";
           solution = "फसलांचा परिस्थिती बदला, चंद्रोदय उत्पादन साधारित्य.";
           break;
@@ -369,9 +413,78 @@ class _DetectionDeteilsState extends State<DetectionDeteils> {
               "व्ह्याइटफ्लायचा नियंत्रण करा, व्हायरस-प्रतिरोधी प्रजांचा वापर करा.";
           break;
 
-        case "Background Without Images":
+        case "No Leaf Found":
           causes = "हे सठीस छायाचित्र नाही";
           solution = "आपल्याकडून हे पान कसंबर केलं नाही.";
+          break;
+
+        //cotton
+        case "Cotton Aphids":
+          causes =
+              "कॉटन अफिड्सच्या कारणांमध्ये पाण्याची कमतरता, वातावरणातील अनियमितता, वाळणीचे कीटक, आणि कीटकपाण्याचा अस्तित्व असू शकतो.";
+          solution =
+              " कॉटन अफिडसारख्या कीटकांच्या नियंत्रणासाठी सायलेन, नीम तेल, कोकडी आणि एफ-टीकोट सारे वापरले जातात. प्राकृतिक दुष्टपरिणामक नव्हे आहेत आणि पारंपारिक प्रणालीवर श्रमाचा वापर कमी करतात.";
+          break;
+        case "Cotton Armyworm":
+          causes =
+              "कॉटन आर्मीवॉर्मच्या कारणांमध्ये पाण्याची कमतरता, मुख्यपणे फॅमिली नोटा नावाच्या अजेंडाच्या मुख्य असू शकते";
+          solution =
+              "कॉटन आर्मीवॉर्मनिया नियंत्रणासाठी थिओफेनमेट-मेथाइल, क्लोरोफेनापाईरस्ट, स्पिनोसॅड, फिप्रोनिल, आणि एस्ट्राडायंट्रेन वापरले जातात.";
+          break;
+        case "Cotton Bacterial Blight":
+          causes =
+              "कॉटन बॅक्टीरियल ब्लाईटच्या कारणांमध्ये वातावरणातील अनियमितता, जलदर्शन, बिजाची अनियमितता, आणि जैविक संक्रमणे शामिल आहेत.";
+          solution =
+              "कॉटन बॅक्टीरियल ब्लाईटच्या नियंत्रणासाठी कॅप्टन, जायड वित्रोल, कॉपर ऑक्सीक्लोराईड, आणि बोर्डोमिक्स आवश्यक आहेत.";
+          break;
+        case "Cotton Healthy":
+          causes =
+              "कॉटन आरोग्यकर्ता असल्याची काही कारणे पाण्याची पुरवठा, शुष्क वातावरण, संतुलित पोषण, आणि कीटक-रोग नियंत्रणासाठी सुसंगत कार्यवाही आहेत.";
+          solution =
+              " समजूत, पाण्याची चांगली आपुण, संतुलित पोषण, आणि कीटक-रोग नियंत्रण या सर्व परिप्रेक्ष्यात तांत्रिक काम करावे लागेल.";
+          break;
+        case "Cotton Powdery Mildew":
+          causes =
+              "कॉटन पावडरी माईल्ड्युच्या कारणांमध्ये मोठ्या प्रमाणातील पाणी, वातावरणातील अनियमितता, आणि रोगाच्या कीटकांच्या अस्तित्वामुळे आहे.";
+          solution =
+              "कॉटन पावडरी माईल्ड्यु नियंत्रण करण्यासाठी, सायलेन, सल्फर, फ्लुवोफिनामाईड, आणि ट्रायडीकॉनाझोल वापरले जातात.";
+          break;
+        case "Cotton Target Spot":
+          causes =
+              "कॉटन टार्गेट स्पॉटच्या कारणांमध्ये पाण्याची पुरवठा, वातावरणातील अनियमितता, आणि कीटक-रोग नियंत्रणाच्या कमतरता असू शकते.";
+          solution =
+              "कॉटन टार्गेट स्पॉटनियंत्रणासाठी थिओफेनमेट-मेथाइल, कॉपर ऑक्सीक्लोराईड, मैन्कोझेब, आणि ट्रायडीमार्क वापरले जातात.";
+          break;
+
+        case "Guava Canker":
+          causes =
+              "गुवाच्या कॅन्करच्या कारणांमध्ये जलदर्शन, अतिरिक्त आपुण, कीटक-रोगांची संक्रमणे, आणि आपल्याला पुढे प्रसारित करणाऱ्या सफरच्या कीटकांचे अस्तित्व असू शकते.";
+          solution =
+              " गुवाच्या कॅन्करच्या नियंत्रणासाठी कॉपर सल्फेट, ब्ल्यू कॉपर, कॅप्टन, आणि मॅनेब या फवारण्यांचा उपयोग केला जातो.";
+          break;
+        case "Guava Dot":
+          causes =
+              "गुवाच्या डॉटच्या कारणांमध्ये रक्तात लाल पडणारे डॉट्स, प्रादुर्भावित प्रतिक्रिया, अतिरिक्त आपुण, विषाणूंची संक्रमणे, आणि वातावरणातील अनियमितता या सर्व कारकांची शामिल आहेत.";
+          solution =
+              "गुवाच्या डॉटच्या नियंत्रणासाठी कॉपर सल्फेट, कॅप्टन, आणि सैडेंझॅन का मांझेब या फवारण्यांचा उपयोग केला जातो.";
+          break;
+        case "Guava Mummification":
+          causes =
+              "गुवाची मुमीफिकेशनची काही कारणे मृदगळे पाणी, कीटक-रोगांच्या संक्रमणे, अतिरिक्त आपुण, आणि विषाणूंची संक्रमणे शामिल आहेत.";
+          solution =
+              "गुवाची मुमीफिकेशनच्या नियंत्रणासाठी कॅप्टन, मॅनेब, आणि कॉप्पर हायड्रॉक्साईड या फवारण्यांचा उपयोग केला जातो";
+          break;
+        case "Guava Rust":
+          causes =
+              "गुवाची जंजीरीची काही कारणे प्रादुर्भावित प्रतिक्रिया, विषाणूंच्या संक्रमणे, अतिरिक्त आपुण, वातावरणातील अनियमितता, आणि अनियमित पोषण आहेत.";
+          solution =
+              "गुवाची जंजीरीनियंत्रणासाठी कॅप्टन, कॉप्पर हायड्रॉक्साईड, आणि स्वप्नेतले फवारण्यांचा उपयोग केला जातो.";
+          break;
+        case "Guava Diseased":
+          causes =
+              "गुवाचे रोग विकृतींची काही कारणे अजूनही स्पष्टपणे नसलेली आहेत, परंतु ते कॉटन विषाणूच्या संक्रमणाच्या कारणांच्या सामायिक रहितीत, कीटकांच्या प्रभावात, किंवा पोषणातील कमतरत्वात प्राधान्य असू शकते.";
+          solution =
+              "गुवाच्या रोगांना नियंत्रण करण्यासाठी उपलब्ध केलेल्या रोगनिरोधक किंवा निरोधक उपाय करा.";
           break;
 
         default:
@@ -529,7 +642,49 @@ class _DetectionDeteilsState extends State<DetectionDeteils> {
               "Rotate crops, apply fungicides, practice good field hygiene.";
           break;
 
-        case "Potato healthy":
+        case "Potato Bacteria":
+          causes =
+              "Potato bacterial disease can be caused by factors such as soil-borne bacteria, water scarcity, potato vulnerability, and improper artificial mixtures.";
+          solution =
+              "Airoxifloride, Copper sulfate, and Bacterial saaylene sprays are used for controlling potato bacterial disease";
+          break;
+        case "Potato Fungi":
+          causes =
+              "Potato fungal disease can be caused by factors such as conducive environment, excessive water, improper artificial mixtures, and potato vulnerability.";
+          solution =
+              "Maneb, Saaylene, and Topman sprays are used for controlling potato fungal disease.";
+          break;
+        case "Potato Nematode":
+          causes =
+              " Potato nematode disease can be caused by factors such as soil nematodes, potato vulnerability, conducive environment, and excessive water.";
+          solution =
+              "Carbosulfan, Vasilene, and Idrate-15 sprays are used for controlling potato nematode disease.";
+          break;
+        case "Potato Pest":
+          causes =
+              "Potato pest infestation can be caused by factors such as water scarcity, potato vulnerability, and excessive pruning.";
+          solution =
+              "Imidacloprid, Acetamethrin, and Deltamethrin insecticides are used for controlling potato pests.";
+        case "Potato Phytophthora":
+          causes =
+              "Potato Phytophthora disease can be caused by factors such as soil acidity, water scarcity, excessive water, and potato vulnerability.";
+          solution =
+              "Fosetyl, Metalaxyl, and Fosetyl-Metalaxyl sprays are used for controlling potato Phytophthora disease.";
+          break;
+        case "Potato Virus":
+          causes =
+              "Potato virus disease or virus infection can be caused by factors such as potato vulnerability, environmental irregularities, and pest-disease infections.";
+          solution =
+              "Bacterial saaylene and Acetamethrin insecticides are used for controlling potato virus disease.";
+          break;
+        case "Potato Diseased":
+          causes =
+              "The causes of potato diseases are not yet clearly defined, but they may primarily result from various pest-disease infections, pest infestations, or nutrient deficiencies";
+          solution =
+              "Employ available disease-resistant or preventive measures to control potato diseases";
+          break;
+
+        case "Potato Healthy":
           causes = "No specific disease identified.";
           solution = "Rotate crops, practice good field hygiene.";
           break;
@@ -616,12 +771,79 @@ class _DetectionDeteilsState extends State<DetectionDeteils> {
           solution = "Control whiteflies, use virus-resistant varieties.";
           break;
 
-        case "Background Without Images":
+        case "No Leaf Found":
           causes = "This is not an Proper image";
           solution = "We have not trained for this leaf";
           break;
 // End of the list
+        //cotton
+        case "Cotton Aphids":
+          causes =
+              " Lack of water, environmental irregularities, pest infestations, and the presence of honeydew-producing insects can contribute to cotton aphids.";
+          solution =
+              "Insecticides like pyrethroids, neem oil, soaps, and F-Temik are commonly used for controlling cotton aphids. They have minimal adverse effects on the environment and reduce the use of conventional systems";
+          break;
+        case "Cotton Armyworm":
+          causes =
+              "Cotton armyworms primarily thrive in conditions of water scarcity and prefer plants from the family Noctuidae.";
+          solution =
+              "Insecticides like Thiofenamate-methyl, Chlorfenapyr, Spinosad, Fipronil, and Estradiol are used for controlling cotton armyworms.";
+          break;
+        case "Cotton Bacterial Blight":
+          causes =
+              "Environmental irregularities, excessive moisture, seed irregularities, and biological infections are involved in the causes of cotton bacterial blight.";
+          solution =
+              "Captan, Jayde Vitrol, Copper oxychloride, and Bordeaux mixture are essential for controlling cotton bacterial blight.";
+          break;
+        case "Cotton Healthy":
+          causes =
+              "Adequate water supply, dry environment, balanced nutrition, and appropriate pest-disease control measures contribute to cotton health.";
+          solution =
+              "Proper management of water, good irrigation, balanced nutrition, and effective pest-disease control are essential for maintaining cotton health.";
+          break;
+        case "Cotton Powdery Mildew":
+          causes =
+              "High humidity, environmental irregularities, and the presence of disease-causing pests contribute to cotton powdery mildew.";
+          solution =
+              "For controlling cotton powdery mildew, pesticides like Sulfur, Fluofenamide, and Triadimefon are commonly used.";
+          break;
+        case "Cotton Target Spot":
+          causes =
+              "Insufficient water supply, environmental irregularities, and lack of pest-disease control measures can contribute to cotton target spot.";
+          solution =
+              "Thiofenamate-methyl, Copper oxychloride, Maneb, and Triadimefon are used for controlling cotton target spot.";
 
+          break;
+        case "Guava Canker":
+          causes =
+              "Factors contributing to guava canker include excessive moisture, over-fertilization, pest-disease infections, and the presence of vector insects spreading the disease";
+          solution =
+              "Copper sulfate, Blue copper, Captan, and Maneb are used for controlling guava canker.";
+          break;
+        case "Guava Dot":
+          causes =
+              "Guava dot is caused by factors such as red dots appearing on leaves, hypersensitivity reactions, over-fertilization, bacterial infections, and environmental irregularities.";
+          solution =
+              "Copper sulfate, Captan, and Saedenjan Ka Maneb are used for controlling guava dot.";
+          break;
+        case "Guava Mummification":
+          causes =
+              "Guava mummification can be caused by factors such as stagnant water, pest-disease infections, over-fertilization, and bacterial infections.";
+          solution =
+              "Captan, Maneb, and Copper Hydroxide are used for controlling guava mummification.";
+          break;
+        case "Guava Rust":
+          causes =
+              "Guava rust can be caused by factors such as hypersensitivity reactions, bacterial infections, over-fertilization, environmental irregularities, and nutrient imbalances";
+          solution =
+              "Captan, Copper Hydroxide, and Dreamt applied sprays are used for controlling guava rust";
+          break;
+        case "Guava Diseased":
+          causes =
+              "The causes of guava diseases are not yet clearly defined, but they may primarily result from cotton bacterial infections, pest infestations, or nutrient deficiencies";
+          solution =
+              "Employ available disease-resistant or preventive measures to control guava diseases.";
+          break;
         default:
           causes = "";
           solution = "";
