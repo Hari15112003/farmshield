@@ -80,11 +80,35 @@ class _DetectionDeteilsState extends State<DetectionDeteils> {
                 widget.results.isEmpty
                     ? 'cautionerror'.tr
                     : widget.results[0]['label']
-                        .toString()
-                        .replaceAll(RegExp(r'\d+'), '')
-                        .trim()
-                        .toString()
-                        .tr,
+                                .toString()
+                                .replaceAll(RegExp(r'\d+'), '')
+                                .trim()
+                                .toString()
+                                .tr ==
+                            "Mango Diseased"
+                        ? "Gall Midges"
+                        : widget.results[0]['label']
+                                    .toString()
+                                    .replaceAll(RegExp(r'\d+'), '')
+                                    .trim()
+                                    .toString()
+                                    .tr ==
+                                "Potato Diseased"
+                            ? "Alternaria"
+                            : widget.results[0]['label']
+                                        .toString()
+                                        .replaceAll(RegExp(r'\d+'), '')
+                                        .trim()
+                                        .toString()
+                                        .tr ==
+                                    "Guava Diseased"
+                                ? "Algal leaf"
+                                : widget.results[0]['label']
+                                    .toString()
+                                    .replaceAll(RegExp(r'\d+'), '')
+                                    .trim()
+                                    .toString()
+                                    .tr,
                 style: const TextStyle(
                     fontSize: 30,
                     color: Colors.black,

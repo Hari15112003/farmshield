@@ -90,14 +90,33 @@ class _AccountScreenState extends State<AccountScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                "settings".tr,
-                style: const TextStyle(
-                  fontSize: 36,
-                  fontWeight: FontWeight.bold,
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "settings".tr,
+                    style: const TextStyle(
+                      fontSize: 36,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 40),
+                  Center(
+                    child: OutlinedButton(
+                        child: const Text("Sign out"),
+                        onPressed: () {
+                          ap
+                              .userSignOut()
+                              .whenComplete(() => Navigator.pushAndRemoveUntil(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const LoginScreen(),
+                                  ),
+                                  (route) => false));
+                        }),
+                  ),
+                ],
               ),
-              const SizedBox(height: 40),
               // Text(
               //   "account".tr,
               //   style: const TextStyle(
@@ -229,20 +248,6 @@ class _AccountScreenState extends State<AccountScreen> {
               const SizedBox(
                 height: 200,
               ),
-              Center(
-                child: OutlinedButton(
-                    child: const Text("Sign out"),
-                    onPressed: () {
-                      ap
-                          .userSignOut()
-                          .whenComplete(() => Navigator.pushAndRemoveUntil(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const LoginScreen(),
-                              ),
-                              (route) => false));
-                    }),
-              )
             ],
             // final themeChange = Provider.of<DarkThemeProvider>(context);
             // return Scaffold(

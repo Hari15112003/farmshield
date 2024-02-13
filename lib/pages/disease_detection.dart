@@ -66,7 +66,7 @@ class _DiseaseDetectionState extends State<DiseaseDetection> {
     print(res);
   }
 
-  List list = ["Mango", "Tomato", "Potato", "Guava", "Cotton"];
+  List list = ["Mango", "Tomato", "Potato", "Guava", "Cotton", "Others"];
   String dropdownValue = "Mango";
 
   @override
@@ -105,7 +105,8 @@ class _DiseaseDetectionState extends State<DiseaseDetection> {
                       actions: <Widget>[
                         TextButton(
                           onPressed: () async {
-                            if (dropdownValue == "Mango") {
+                            if (dropdownValue == "Mango" ||
+                                dropdownValue == "Others") {
                               await loadModel(
                                   path:
                                       "assets/model/Mango/model_unquant.tflite",
@@ -137,7 +138,8 @@ class _DiseaseDetectionState extends State<DiseaseDetection> {
                         ),
                         TextButton(
                           onPressed: () async {
-                            if (dropdownValue == "Mango") {
+                            if (dropdownValue == "Mango" ||
+                                dropdownValue == "Others") {
                               await loadModel(
                                   path:
                                       "assets/model/Mango/model_unquant.tflite",
